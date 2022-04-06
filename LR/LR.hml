@@ -1,16 +1,24 @@
 <div class="container">
-    <text class="title">
-        Hello {{ title }}
-    </text>
+    <text class="title">输入数据可视化</text>
 
 
-    <canvas ref="canvas1" style="width: 400px; height: 400px; stroke: dodgerblue; stroke-width: 3px;"></canvas>
-    <input type="button" style="width: 180px; height: 60px;" value="fillStyle" onclick="handleClick" />
-    <text onclick="onTextClick" class="title-text">Show popup menu.</text>
+    <div class="div-display">
+        <canvas ref="canvas1" style="width: 400px; height: 400px"></canvas>
+    </div>
+
+    <div class="div-button">
+        <button value="生成随机数据" onclick="handleClick"></button>
+    </div>
+
+    <div class="div-button">
+        <button onclick="onTextClick">菜单</button>
+    </div>
+
     <menu id="apiMenu" onselected="onMenuSelected">
         <option value="Item 1">返回主页</option>
         <option value="Item 2">详细信息</option>
         <option value="Item 3">上一步</option>
         <option value="Item 4">下一步</option>
     </menu>
+
 </div>
