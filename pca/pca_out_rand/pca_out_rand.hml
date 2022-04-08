@@ -1,0 +1,5 @@
+<div class="container">
+    <text class="title">降维结果</text>
+    <text class="paragraph-text">{{paragraphFirst}}</text>
+    <canvas ref="canvas" style="width: 300px; height: 600px; background-color: #ffffff;"></canvas>
+</div>

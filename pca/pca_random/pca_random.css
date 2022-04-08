@@ -1,0 +1,35 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 10px;
+    width: 454px;
+    height: 800px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+}
+
+.paragraph-text {
+    color: #000000;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.dim_x {
+    width: 20%;
+}
+.dim_y {
+    width: 20%;
+}
+.dim_after {
+    width: 20%;
+}
+.button {
+    width: 50%;
+}
