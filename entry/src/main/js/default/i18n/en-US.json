@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "hello": "Hello",
+    "world": "World",
+    "welcome": "Welcome to EasyML",
+    "LR": "Linear Regression",
+    "PCA": "PCA",
+    "MLP": "MLP",
+    "about": "About",
+    "close": "Close"
+  }
+}

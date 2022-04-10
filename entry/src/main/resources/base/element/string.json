@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "JS_Empty Ability"
+    },
+    {
+      "name": "EasyML",
+      "value": "EasyML"
+    },
+    {
+      "name": "computeserviceability_description",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "imagedataability_description",
+      "value": "hap sample empty provider"
+    }
+  ]
+}

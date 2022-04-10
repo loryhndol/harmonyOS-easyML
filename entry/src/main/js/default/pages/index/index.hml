@@ -4,13 +4,16 @@
     </text>
     <div class="div-button">
         <div class="circle_all">
-            <button class="buttons" onclick="launch">{{ $t('strings.LR') }}</button>
+            <button class="buttons" onclick="launchLR">{{ $t('strings.LR') }}</button>
         </div>
         <div class="circle_all">
-            <button class="buttons">{{ $t('strings.PCA') }}</button>
+            <button class="buttons" onclick="launchPCA">{{ $t('strings.PCA') }}</button>
         </div>
         <div class="circle_all">
-            <button class="buttons">{{ $t('strings.MLP') }}</button>
+            <button class="buttons" onclick="launchMLP">{{ $t('strings.MLP') }}</button>
+        </div>
+        <div class="circle_all">
+            <button class="buttons" onclick="launchImageProcessing">图像处理</button>
         </div>
     </div>
 
@@ -21,8 +24,8 @@
         <panel id="simplepanel" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
             <div class="panel-div">
                 <div class="inner-txt">
-                    <text class="txt">我们来自山东大学计算机学院.本应用使用鸿蒙 ArkUI 原生组件开发。</text>
-                    <text class="txt">Github：@loryhndol, @NuanBaobao, @sduzzx857, @zwh-sdu</text>
+                    <text class="txt">我们来自山东大学计算机学院.本应用使用鸿蒙 ArkUI + mljs + colormapjs 开发。</text>
+                    <text class="txt">Github：@loryhndol, @NuanBaobao, @sduzzx857, @zwh-sdu, @qiaojing09</text>
                 </div>
                 <div class="inner-btn">
                     <button type="capsule" onclick="closePanel">{{ $t('strings.close')}}</button>

@@ -1,0 +1,23 @@
+<div class="container">
+    <text class="title">图像显示</text>
+
+
+    <div class="div-display">
+        <canvas ref="canvas" style="width: 400px; height: 400px"></canvas>
+    </div>
+
+    <div class="div-button">
+        <button value="显示" onclick="handleClick"></button>
+    </div>
+
+    <div class="div-button">
+        <button onclick="onTextClick">菜单</button>
+    </div>
+
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="Item 1">返回主页</option>
+        <option value="Item 2">详细信息</option>
+        <option value="Item 3">上一步</option>
+        <option value="Item 4">下一步</option>
+    </menu>
+</div>
