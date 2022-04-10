@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 import ohos.ace.ability.AceAbility;
 import ohos.aafwk.content.Intent;

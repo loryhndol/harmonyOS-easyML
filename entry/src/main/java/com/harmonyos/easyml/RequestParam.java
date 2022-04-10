@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 public class RequestParam {
     private int firstNum;

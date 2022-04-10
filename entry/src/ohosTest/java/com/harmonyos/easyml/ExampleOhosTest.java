@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 import ohos.aafwk.ability.delegation.AbilityDelegatorRegistry;
 import org.junit.Test;
@@ -9,6 +9,6 @@ public class ExampleOhosTest {
     @Test
     public void testBundleName() {
         final String actualBundleName = AbilityDelegatorRegistry.getArguments().getTestBundleName();
-        assertEquals("com.example.myapplication", actualBundleName);
+        assertEquals("com.harmonyos.easyml", actualBundleName);
     }
 }

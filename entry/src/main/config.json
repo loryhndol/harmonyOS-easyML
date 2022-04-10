@@ -1,96 +1,87 @@
 {
-  "app": {
-    "bundleName": "com.example.myapplication",
-    "vendor": "example",
-    "version": {
-      "code": 1000000,
-      "name": "1.0.0"
-    }
-  },
-  "deviceConfig": {},
-  "module": {
-    "package": "com.example.myapplication",
-    "name": ".MyApplication",
-    "mainAbility": "com.example.myapplication.MainAbility",
-    "deviceType": [
-      "phone",
-      "tablet",
-      "tv",
-      "wearable"
-    ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
-    "reqPermissions": [
-      {
-        "name": "com.example.myapplication.ImageDataAbility.DATA"
-      },
-      {
-        "name": "ohos.permission.READ_USER_STORAGE"
-      },
-      {
-        "name": "ohos.permission.WRITE_USER_STORAGE"
-      }
-    ],
-    "abilities": [
-      {
-        "skills": [
-          {
-            "entities": [
-              "entity.system.home"
-            ],
-            "actions": [
-              "action.system.home"
-            ]
-          }
-        ],
-        "visible": true,
-        "name": "com.example.myapplication.MainAbility",
-        "icon": "$media:icon",
-        "description": "$string:mainability_description",
-        "label": "$string:EasyML",
-        "type": "page",
-        "launchType": "standard"
-      },
-      {
-        "name": "com.example.myapplication.ComputeServiceAbility",
-        "icon": "$media:icon",
-        "description": "$string:computeserviceability_description",
-        "type": "service"
-      },
-      {
-        "name": "com.example.myapplication.ImageDataAbility",
-        "icon": "$media:icon",
-        "description": "$string:imagedataability_description",
-        "type": "data",
-        "uri": "dataability://com.example.myapplication.ImageDataAbility",
-      }
-    ],
-    "js": [
-      {
-        "pages": [
-          "pages/index/index",
-          "pages/LR/LR",
-          "pages/PCA/input_pca/input_pca",
-          "pages/PCA/pca_random/pca_random",
-          "pages/PCA/pca_out_rand/pca_out_rand",
-          "pages/MLP/MLP",
-          "pages/image_processing/image_processing"
-        ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": true
+    "app": {
+        "bundleName": "com.harmonyos.easyml",
+        "vendor": "harmonyos",
+        "version": {
+            "code": 1000000,
+            "name": "1.0.0"
         }
-      }
-    ],
-    "defPermissions": [
-      {
-        "name": "com.example.myapplication.DataAbilityShellProvider.PROVIDER"
-      }
-    ]
-  }
+    },
+    "deviceConfig": {},
+    "module": {
+        "package": "com.harmonyos.easyml",
+        "name": ".EasyML",
+        "mainAbility": "com.harmonyos.easyml.MainAbility",
+        "deviceType": ["phone", "tablet", "tv", "wearable"],
+        "distro": {
+            "deliveryWithInstall": true,
+            "moduleName": "entry",
+            "moduleType": "entry",
+            "installationFree": false
+        },
+        "reqPermissions": [
+            {
+                "name": "com.harmonyos.easyml.ImageDataAbility.DATA"
+            },
+            {
+                "name": "ohos.permission.READ_USER_STORAGE"
+            },
+            {
+                "name": "ohos.permission.WRITE_USER_STORAGE"
+            }
+        ],
+        "abilities": [
+            {
+                "skills": [
+                    {
+                        "entities": ["entity.system.home"],
+                        "actions": ["action.system.home"]
+                    }
+                ],
+                "visible": true,
+                "name": "com.harmonyos.easyml.MainAbility",
+                "icon": "$media:icon",
+                "description": "$string:mainability_description",
+                "label": "$string:EasyML",
+                "type": "page",
+                "launchType": "standard"
+            },
+            {
+                "name": "com.harmonyos.easyml.ComputeServiceAbility",
+                "icon": "$media:icon",
+                "description": "$string:computeserviceability_description",
+                "type": "service"
+            },
+            {
+                "name": "com.harmonyos.easyml.ImageDataAbility",
+                "icon": "$media:icon",
+                "description": "$string:imagedataability_description",
+                "type": "data",
+                "uri": "dataability://com.harmonyos.easyml.ImageDataAbility"
+            }
+        ],
+        "js": [
+            {
+                "pages": [
+                    "pages/index/index",
+                    "pages/LR/LR",
+                    "pages/PCA/input_pca/input_pca",
+                    "pages/PCA/pca_random/pca_random",
+                    "pages/PCA/pca_out_rand/pca_out_rand",
+                    "pages/MLP/MLP",
+                    "pages/image_processing/image_processing"
+                ],
+                "name": "default",
+                "window": {
+                    "designWidth": 720,
+                    "autoDesignWidth": true
+                }
+            }
+        ],
+        "defPermissions": [
+            {
+                "name": "com.harmonyos.easyml.DataAbilityShellProvider.PROVIDER"
+            }
+        ]
+    }
 }

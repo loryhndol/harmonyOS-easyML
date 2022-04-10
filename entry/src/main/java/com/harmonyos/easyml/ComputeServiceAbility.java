@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 // ohos相关接口包
 import ohos.aafwk.ability.Ability;

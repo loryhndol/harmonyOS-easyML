@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;

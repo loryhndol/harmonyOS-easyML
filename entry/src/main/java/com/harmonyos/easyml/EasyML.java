@@ -1,8 +1,8 @@
-package com.example.myapplication;
+package com.harmonyos.easyml;
 
 import ohos.aafwk.ability.AbilityPackage;
 
-public class MyApplication extends AbilityPackage {
+public class EasyML extends AbilityPackage {
     @Override
     public void onInitialize() {
         super.onInitialize();
