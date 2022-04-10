@@ -1,9 +1,6 @@
-import activation from '../../mltoolkit/activation/activation.js'
 import ability_featureAbility from '@ohos.ability.featureAbility';
 import router from '@system.router';
 var context = ability_featureAbility.getContext();
-
-import {kv_put, kv_get, writeText} from './utils.js';
 
 async function a(){
 }
@@ -41,9 +38,24 @@ export default {
             console.error('Failed to obtain the file directory. Cause: ' + error.message);
         })
     },
-    launch(){
+    launchLR(){
         router.push({
-            uri:'pages/LR/LR',
+            uri:'pages/LR/LR'
+        })
+    },
+    launchPCA(){
+        router.push({
+            uri:'pages/PCA/input_pca/input_pca'
+        })
+    },
+    launchMLP(){
+        router.push({
+            uri:'pages/MLP/MLP'
+        })
+    },
+    launchImageProcessing(){
+        router.push({
+            uri:'pages/image_processing/image_processing'
         })
     },
     showPanel(){
