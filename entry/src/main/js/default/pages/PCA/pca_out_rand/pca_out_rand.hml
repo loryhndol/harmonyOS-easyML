@@ -2,6 +2,6 @@
     <text class="title">降维结果</text>
     <text class="paragraph-text">{{paragraphFirst}}</text>
     <div class="div-display">
-        <canvas ref="canvas" style="width: 400px; height: 800px"></canvas>
+        <canvas ref="canvas" style="width: 400px; height: 1200px"></canvas>
     </div>
 </div>
