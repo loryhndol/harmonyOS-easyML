@@ -1,0 +1,12 @@
+<div class="container">
+    <text class="title">
+        {{ model_name }}
+    </text>
+    <canvas class="rect-line" ref="canvas" @touchstart="add_point">
+    </canvas>
+    <div class="div-button">
+        <div class="circleall">
+            <button class="buttons" waiting="true" onclick="linear_regression">绘制拟合直线</button>
+        </div>
+    </div>
+</div>
