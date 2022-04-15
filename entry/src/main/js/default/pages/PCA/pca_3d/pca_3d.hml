@@ -1,0 +1,12 @@
+<div class="container">
+    <text class="title">
+        主成分分析-3d
+    </text>
+    <div class="div-display">
+<!--        <canvas ref="canvas" style="width: 400px; height: 400px" @touchstart="initMove" @touchmove="move" @touchend="stopMove"></canvas>-->
+        <canvas ref="canvas" style="width: 400px; height: 400px"></canvas>
+    </div>
+    <slider min="-360" max="360" value="{{theta}}" onchange="set_theta" ></slider>
+    <slider min="-180" max="180" value="{{phi}}" onchange="set_phi" ></slider>
+    <button class="button" onclick="test" value="点击绘制特征向量"></button>
+</div>

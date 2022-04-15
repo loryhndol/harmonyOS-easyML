@@ -68,6 +68,7 @@
                     "pages/PCA/input_pca/input_pca",
                     "pages/PCA/pca_random/pca_random",
                     "pages/PCA/pca_out_rand/pca_out_rand",
+                    "pages/PCA/pca_3d/pca_3d",
                     "pages/MLP/MLP",
                     "pages/image_processing/image_processing"
                 ],

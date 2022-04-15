@@ -2,6 +2,7 @@ const { PCA } = require('ml-pca');
 const { Matrix } = require('ml-matrix');
 import {evaluate_cmap} from '../../../js-colormaps.js';
 import {fillRoundRect} from '../../../utils/fillRoundRect.js';
+import router from '@system.router';
 
 export default {
     data : {
@@ -27,14 +28,8 @@ export default {
 
         var before_pca = new Matrix(this.data1); //矩阵化
         console.info(this.data1);
-        var max_val = this.data1[0][0];
-        var min_val = this.data1[0][0];
-        for (var i = 0; i < m; i++) {
-            for (var j = 0; j < n; j++) {
-                max_val = Math.max(max_val, this.data1[i][j]);
-                min_val = Math.min(min_val, this.data1[i][j]);
-            }
-        }
+        var max_val = before_pca.max()
+        var min_val = before_pca.min();
 
         for (let i = 0; i < m; i++) {
             for(let j = 0; j < n; j++){
@@ -55,14 +50,9 @@ export default {
         }
         var eigenvec = new Matrix(newPoints);
         var after_pca = before_pca.mmul(eigenvec.transpose())
-        max_val = after_pca.data[0][0];
-        min_val = after_pca.data[0][0];
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < d_after; j++) {
-                max_val = Math.max(max_val, after_pca.data[i][j]);
-                min_val = Math.min(min_val, after_pca.data[i][j]);
-            }
-        }
+        max_val = after_pca.max();
+        min_val = after_pca.min();
+
         for (let i = 0; i < m; i++) {
             for(let j = 0; j < n; j++){
                 let normalized_data = (after_pca.data[i][j] - min_val) / (max_val - min_val);
@@ -74,4 +64,9 @@ export default {
 
 
     },
+    handleClick(){
+        router.push ({
+            uri: 'pages/PCA/pca_3d/pca_3d',
+        });
+    }
 }

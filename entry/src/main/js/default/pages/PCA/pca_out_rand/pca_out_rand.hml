@@ -4,4 +4,7 @@
     <div class="div-display">
         <canvas ref="canvas" style="width: 400px; height: 800px"></canvas>
     </div>
+    <div class="div-display">
+        <button value="jump" onclick="handleClick"></button>
+    </div>
 </div>
