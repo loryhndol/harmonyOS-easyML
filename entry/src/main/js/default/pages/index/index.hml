@@ -1,6 +1,6 @@
 <div class="container">
     <text class="title">
-        {{ $t('strings.welcome')}}
+        {{ $t('strings.welcome') }}
     </text>
     <div class="div-button">
         <div class="circle_all">
@@ -19,16 +19,19 @@
 
     <div class="doc-page">
         <div class="btn-div">
-            <button class="buttons" onclick="showPanel">{{ $t('strings.about')}}</button>
+            <button class="buttons" onclick="showPanel">{{ $t('strings.about') }}</button>
         </div>
         <panel id="simplepanel" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
             <div class="panel-div">
                 <div class="inner-txt">
-                    <text class="txt">我们来自山东大学计算机学院.本应用使用鸿蒙 ArkUI + mljs + colormapjs 开发。</text>
-                    <text class="txt">Github：@loryhndol, @NuanBaobao, @sduzzx857, @zwh-sdu, @qiaojing09</text>
+                    <text class="txt">我们来自山东大学计算机学院。本应用使用鸿蒙 ArkUI + mljs + colormapjs 开发。</text>
+                    <text class="txt">Github：</text>
+                    <text class="txt">UI & UX:@loryhndol</text>
+                    <text class="txt">LR&MLP: @NuanBaobao, @qiaojing09</text>
+                    <text class="txt"> PCA& data I/O: @sduzzx857, @zwh-sdu</text>
                 </div>
                 <div class="inner-btn">
-                    <button type="capsule" onclick="closePanel">{{ $t('strings.close')}}</button>
+                    <button type="capsule" onclick="closePanel">{{ $t('strings.close') }}</button>
                 </div>
             </div>
         </panel>
