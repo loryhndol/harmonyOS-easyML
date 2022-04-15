@@ -65,8 +65,17 @@ export default {
 
     },
     handleClick(){
-        router.push ({
-            uri: 'pages/PCA/pca_3d/pca_3d',
-        });
+        console.info(this.after);
+        if(this.after === '2'){
+            router.push ({
+                uri: 'pages/PCA/pca_3d/pca_3d',
+            });
+        }else if(this.after === '1'){
+            router.push ({
+                uri: 'pages/PCA/pca_2d/pca_2d',
+            });
+        }
+
+
     }
 }

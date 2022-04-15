@@ -7,15 +7,16 @@ export default {
         after: 3,
     },
     change_x(e) {
-        this.m = 4;  //e.value
+        this.m = e.value;  //e.value
     },
     change_y(e) {
-        this.n = 3;
+        this.n = e.value;
     },
     change_after(e) {
-        this.after = 2;
+        this.after = e.value;
     },
     launch() {
+
         router.push ({
             uri: 'pages/PCA/pca_out_rand/pca_out_rand',
             params: {
