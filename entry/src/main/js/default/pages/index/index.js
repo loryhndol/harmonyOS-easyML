@@ -40,7 +40,7 @@ export default {
     },
     launchLR(){
         router.push({
-            uri:'pages/LR/LR'
+            uri:'pages/LR/index/index'
         })
     },
     launchPCA(){

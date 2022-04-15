@@ -2,34 +2,27 @@ import router from '@system.router';
 export default {
     data: {
         paragraphFirst: '  我们随机生成m*n维数据，第一维代表样本的个数，第二维代表每个样本的维数。',
-        m: 5,
-        n: 3,
-        after: 2,
+        m: 7,
+        n: 5,
+        after: 3,
     },
     change_x(e) {
-        this.m = e.value;
+        this.m = 4;  //e.value
     },
     change_y(e) {
-        this.n = e.value;
+        this.n = 3;
     },
     change_after(e) {
-        this.after = e.value;
+        this.after = 2;
     },
     launch() {
-        const d_after = this.after;
-        if(this.after>=this.n){
-            console.warn("降维后的维数应小于原数据维数");
-        }
-        else{
-            router.push ({
-                uri: 'pages/pca_out_rand/pca_out_rand',
-                params: {
-                    data1: rnd(this.m, this.n),
-                    after: d_after,
-                },
-            });
-        }
-
+        router.push ({
+            uri: 'pages/PCA/pca_out_rand/pca_out_rand',
+            params: {
+                data1: rnd(this.m, this.n),
+                after: this.after,
+            },
+        });
     }
 }
 

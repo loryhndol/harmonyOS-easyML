@@ -9,7 +9,7 @@ export default {
     },
     launch() {
         router.push ({
-            uri:'pages/linear_regression/linear_regression', // 指定要跳转的页面
+            uri:'pages/LR/linear_regression/linear_regression', // 指定要跳转的页面
         })
     }
 }

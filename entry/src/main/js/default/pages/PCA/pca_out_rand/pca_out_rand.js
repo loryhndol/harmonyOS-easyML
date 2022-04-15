@@ -1,5 +1,9 @@
 const { PCA } = require('ml-pca');
 const { Matrix } = require('ml-matrix');
+import {evaluate_cmap} from '../../../js-colormaps.js';
+import {fillRoundRect} from '../../../utils/fillRoundRect.js';
+import router from '@system.router';
+
 export default {
     data : {
         paragraphFirst: '  我们用热力图展示降维结果，上面是原始数据，下面是降维后的结果。',
@@ -8,69 +12,61 @@ export default {
     onShow() {
         const el = this.$refs.canvas;
         const ctx = el.getContext('2d');
+
         const m = this.data1.length;
         const n = this.data1[0].length;
         const d_after = this.after;
 
+        this.table_height = this.data1.length;
+        this.table_width = this.data1[0].length;
+        let cell_size = 24;
+        console.info('width:' + this.table_width);
+        console.info('height:' + this.table_height);
+        let table_padding_x = (400 - 50 * 2 - (cell_size + 2) * this.table_width) / 2; // container的padding考虑在内
+        let table_padding_y_upper = 20
+        let table_padding_y_lower = 200;
 
-
-        const a = 300/(n+2);
         var before_pca = new Matrix(this.data1); //矩阵化
-        var max = this.data1[0][0];
-        var min = this.data1[0][0];
-        for (var i = 0; i < m; i++) {
-            for (var j = 0; j < n; j++) {
-                max = Math.max(max, this.data1[i][j]);
-                min = Math.min(min, this.data1[i][j]);
-            }
-        }
-        var temp = Matrix.ones(m,n);
-        temp = temp.mul(min); //构建最小矩阵
-        var before_pca_scale = Matrix.sub(before_pca, temp); //减去最小值
-        before_pca_scale.div(max-min); // 除以最值的差
-        for (var i = 0; i < m; i++) {
-            for(var j = 0; j < n; j++){
-                ctx.fillStyle = this.color[parseInt(10*before_pca_scale.data[i][j])];
-                ctx.fillRect(a+a*j,25+a*i,a,a);
-            }
-        }
-        const pca = new PCA(this.data1);
-        var newPoints = Array(d_after);
-        const evec = pca.getEigenvectors();
+        console.info(this.data1);
+        var max_val = before_pca.max()
+        var min_val = before_pca.min();
 
-        for(var i =0; i<d_after; i++)
+        for (let i = 0; i < m; i++) {
+            for(let j = 0; j < n; j++){
+                let normalized_data = (before_pca.data[i][j] - min_val) / (max_val - min_val);
+                console.info(normalized_data);
+                let rgb_array = evaluate_cmap(normalized_data, 'viridis', false);
+                let fillColor = 'rgb(' + rgb_array[0] + ',' + rgb_array[1] + ',' + rgb_array[2] + ')';
+                fillRoundRect(ctx, table_padding_x + j * (cell_size + 2), table_padding_y_upper + i * (cell_size + 2), cell_size, cell_size, 4, fillColor);
+            }
+        }
+
+        const pca = new PCA(this.data1);
+        const newPoints = Array(d_after);
+        const evec = pca.getEigenvectors();
+        for(let i =0; i<d_after; i++)
         {
             newPoints[i] = evec.data[i];
         }
         var eigenvec = new Matrix(newPoints);
-
         var after_pca = before_pca.mmul(eigenvec.transpose())
+        max_val = after_pca.max();
+        min_val = after_pca.min();
 
-        max = after_pca.data[0][0];
-        min = after_pca.data[0][0];
-        for (var i = 0; i < m; i++) {
-            for (var j = 0; j < d_after; j++) {
-                max = Math.max(max, after_pca.data[i][j]);
-                min = Math.min(min, after_pca.data[i][j]);
+        for (let i = 0; i < m; i++) {
+            for(let j = 0; j < n; j++){
+                let normalized_data = (after_pca.data[i][j] - min_val) / (max_val - min_val);
+                let rgb_array = evaluate_cmap(normalized_data, 'viridis', false);
+                let fillColor = 'rgb(' + rgb_array[0] + ',' + rgb_array[1] + ',' + rgb_array[2] + ')';
+                fillRoundRect(ctx, table_padding_x + j * (cell_size + 2), table_padding_y_lower + i * (cell_size + 2), cell_size, cell_size, 4, fillColor);
             }
         }
-        var ones = Array(m);
-        var one = Array(d_after);
-        for(var i=0;i<m;i++){
-            for(var j=0;j<d_after;j++){
-                one[j] = 1;
-            }
-            ones[i] = one;
-        }
-        var temp1 = new Matrix(ones);
-        temp1 = temp1.mul(min); //构建最小矩阵
-        var after_pca_scale = Matrix.sub(after_pca, temp1); //减去最小值
-        after_pca_scale.div(max-min); // 除以最值的差
-        for (var i = 0; i < m; i++) {
-            for(var j = 0; j < d_after; j++){
-                ctx.fillStyle = this.color[parseInt(10*after_pca_scale.data[i][j])];
-                ctx.fillRect(a+a*j,m*a+50+a*i,a,a);
-            }
-        }
+
+
     },
+    handleClick(){
+        router.push ({
+            uri: 'pages/PCA/pca_3d/pca_3d',
+        });
+    }
 }

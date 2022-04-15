@@ -64,12 +64,14 @@
             {
                 "pages": [
                     "pages/index/index",
-                    "pages/LR/LR",
                     "pages/PCA/input_pca/input_pca",
                     "pages/PCA/pca_random/pca_random",
                     "pages/PCA/pca_out_rand/pca_out_rand",
                     "pages/MLP/MLP",
-                    "pages/image_processing/image_processing"
+                    "pages/image_processing/image_processing",
+                    "pages/LR/index/index",
+                    "pages/LR/introduce/introduce",
+                    "pages/LR/linear_regression/linear_regression"
                 ],
                 "name": "default",
                 "window": {

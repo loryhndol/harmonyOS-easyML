@@ -10,7 +10,7 @@ export default {
     },
     launch() {
         router.push ({
-            uri:'pages/introduce/introduce', // 指定要跳转的页面
+            uri:'pages/LR/introduce/introduce', // 指定要跳转的页面
         })
     }
 }

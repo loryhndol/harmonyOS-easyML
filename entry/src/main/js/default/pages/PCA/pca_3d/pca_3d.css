@@ -16,10 +16,17 @@
     width: 454px;
     padding-bottom: 20px;
 }
-.paragraph-text {
-    font-size: 15px;
-    width: 454px;
-    text-align: left;
+
+.button{
+/*    margin-top: 10px;*/
+    border-top: 30px;
+    border-top-color: white;
+    text-color: white;
+    font-size: 20px;
+    font-style: normal;
+    background-color: blue;
+    width: 50%;
+    height: 100px;
 }
 
 .div-display {
