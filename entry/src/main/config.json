@@ -53,7 +53,16 @@
         "description": "$string:mainability_description",
         "label": "$string:EasyML",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "standard",
+        "metaData":{
+          "customizeData":[
+            {
+              "name": "hwc-theme",
+              "extra": "",
+              "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar"
+            }
+          ]
+        }
       },
       {
         "name": "com.harmonyos.easyml.ComputeServiceAbility",
