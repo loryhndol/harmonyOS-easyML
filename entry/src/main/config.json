@@ -82,7 +82,8 @@
           "pages/image_processing/image_processing",
           "pages/LR/index/index",
           "pages/LR/introduce/introduce",
-          "pages/LR/linear_regression/linear_regression"
+          "pages/LR/linear_regression/linear_regression",
+          "pages/Documents/Documents"
         ],
         "name": "default",
         "window": {

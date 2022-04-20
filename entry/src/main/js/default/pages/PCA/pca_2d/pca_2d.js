@@ -1,3 +1,5 @@
+import prompt from '@system.prompt';
+import router from '@system.router';
 export default {
     data: {
         title: '主成分分析',
@@ -136,5 +138,20 @@ export default {
         }
         ctx.stroke();
         ctx.closePath();
-    }
+    },
+    onMenuSelected(e) {
+        prompt.showToast({
+            message: e.value
+        })
+        if (e.value == "Item 1") {
+            router.push ({
+                uri:'pages/index/index', // 指定要跳转的页面
+            })
+        }
+    },
+    onTextClick() {
+        this.$element("apiMenu").show({
+            x: 270, y: 320
+        });
+    },
 }

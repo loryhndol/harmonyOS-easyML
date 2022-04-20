@@ -1,8 +1,17 @@
 <div class="container">
-    <text class="title">PCA简介：</text>
-    <text class="paragraph-text">{{paragraphFirst}}</text>
-    <text class="paragraph-text">请选择输入方式：</text>
-    <button type="capsule" value="随机生成" class="button" onclick="launch_random"></button>
-    <button type="capsule" value="手动输入" class="button" onclick="launch_manual"></button>
-    <button type="capsule" value="点击输入" class="button" onclick="launch_click"></button>
+    <div class="div-title">
+        <text class="text-title">
+            {{ title }}
+        </text>
+    </div>
+    <div class="div-introduce">
+        <text class="text-introduce">
+            {{ introduce }}
+        </text>
+    </div>
+
+    <div class="div-button">
+        <button type="capsule" value="随机生成" class="button" onclick="launch_random"></button>
+    </div>
+
 </div>

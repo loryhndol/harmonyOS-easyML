@@ -1,3 +1,5 @@
+import router from '@system.router';
+import prompt from '@system.prompt';
 import SimpleLinearRegression from 'ml-regression-simple-linear';
 
 export default {
@@ -6,111 +8,17 @@ export default {
         linear_result: "",
         // 画布信息
         canvas_width: 300,
-        canvas_height: 450,
+        canvas_height: 400,
         // 用户输入点坐标
         point_collection_x: [],
         point_collection_y: []
     },
     onShow() {
-        const el = this.$refs.canvas;
-        const ctx = el.getContext('2d');
 
-        let dx = 30;
-        let dy = this.canvas_height - 20;
-        var textX = 0;
-        var textY = 50;
-
-        // 创建一个新的绘制路径
-        ctx.beginPath();
-        ctx.lineWidth = 3;
-        // 指定线端点的样式
-        ctx.lineCap = 'butt';
-        // 设置描边的颜色
-        ctx.strokeStyle = '#100f0f';
-
-        //        strokeRect(x: number, y: number, width:number, height: number): void 绘制具有边框的矩形，矩形内部不填充
-        ctx.strokeRect(30, 20, this.canvas_width, this.canvas_height);
-
-        //        // 指定绘制的填充色
-        ctx.fillStyle = '#c3c4c2';
-        // 绘制提示信息
-        // fillRect(x: number, y: number, width:number, height: number): void 填充一个矩形
-        ctx.fillRect(35,25,100,50);
-        // 绘制数据提示信息
-        ctx.beginPath();
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = "#f80505";
-        ctx.fillStyle = "#fc0303";
-
-        ctx.moveTo(40,35);
-
-        // arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise: boolean): void
-        // 绘制弧线路径
-        ctx.arc(40,35, 5, 0, 6.28);
-        // 对封闭路径进行填充
-        ctx.fill();
-        ctx.stroke();
-
-        ctx.font = '16px sans-serif';
-        ctx.fillStyle = "#0e0e0e";
-        // fillText(text: string, x: number, y: number): void 绘制填充类文本
-        ctx.fillText("原始数据", 60, 40);
-
-        // 创建一个新的绘制路径
-        ctx.beginPath();
-        ctx.lineWidth = 3;
-        // 指定线端点的样式
-        ctx.lineCap = 'butt';
-        // 设置描边的颜色
-        ctx.strokeStyle = '#2669be';
-
-        // moveTo(x: number, y: number): void 路径从当前点移动到指定点。
-        ctx.moveTo(35, 60);
-        // lineTo(x: number, y: number): void 从当前点到指定点进行路径连接
-        ctx.lineTo(50, 60);
-        // 进行边框绘制操作
-        ctx.stroke();
-
-        ctx.font = '16px sans-serif';
-        ctx.fillStyle = "#0e0e0e";
-        // fillText(text: string, x: number, y: number): void 绘制填充类文本
-        ctx.fillText("拟合直线", 60, 65);
-
-
-
-        // 绘制x轴
-        //        // moveTo(x: number, y: number): void 路径从当前点移动到指定点。
-        //        ctx.moveTo(30, this.canvas_height);
-        //        //        // lineTo(x: number, y: number): void 从当前点到指定点进行路径连接
-        //        ctx.lineTo(this.canvas_width + 30, this.canvas_height);
-
-        //绘制x轴数字
-        while (dx < this.canvas_width) {
-            ctx.font = '12pt Arial';
-            ctx.fillStyle = '#0e0e0e';
-            ctx.fillText(textX, dx, this.canvas_height + 35);
-            textX += 50;
-            dx += 50;
-        }
-
-        // 绘制y轴
-        //        ctx.moveTo(30, this.canvas_height);
-        //        ctx.lineTo(30, 20);
-        //        ctx.font = '12pt Arial';
-        //        ctx.fillStyle = '#0e0e0e';
-
-        //绘制数字
-        while (dy > 0) {
-            ctx.font = '12pt Arial';
-            ctx.fillStyle = '#0e0e0e';
-            ctx.fillText(textY, 30 - 25, dy);
-            textY += 50;
-            dy -= 50;
-        }
-        // 进行边框绘制操作
-        ctx.stroke();
     },
     linear_regression() {
+
+
         const regression = new SimpleLinearRegression(this.point_collection_x, this.point_collection_y);
 
         // 直线斜率w
@@ -165,6 +73,7 @@ export default {
         ctx.lineTo(x2, y2);
         // 进行边框绘制操作
         ctx.stroke();
+
     },
     // 添加点的信息
     add_point(msg) {
@@ -196,5 +105,14 @@ export default {
         // 对封闭路径进行填充
         ctx.fill();
         ctx.stroke();
+    },
+    onClickReset(){
+        const el = this.$refs.canvas;
+        const ctx = el.getContext('2d');
+        let obj = this.$refs.canvas.getBoundingClientRect();
+
+        let width = obj.width;
+        let height = obj.height;
+        ctx.clearRect(0,0,width,height);
     }
 }

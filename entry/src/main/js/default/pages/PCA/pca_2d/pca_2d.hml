@@ -7,4 +7,11 @@
         <button class="button" onclick="drawVector" value="点击绘制特征向量"></button>
         <button class="button" onclick="projection" value="点击绘制投影"></button>
     </div>
+    <div class="div-button">
+        <button onclick="onTextClick">菜单</button>
+    </div>
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="Item 1">返回主页</option>
+        <option value="Item 2">原理介绍</option>
+    </menu>
 </div>
