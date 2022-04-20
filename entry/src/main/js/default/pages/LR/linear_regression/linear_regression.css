@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 454px;
+    height: 600px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.title {
+    background-color: #e4e4e5;
+    border-radius: 12px;
+/*    box-shadow: 2px 5px 10px 1px rgba(192, 192, 192, 0.9);*/
+    font-size: 25px;
+    text-align: center;
+    width: 454px;
+
+
+}
+
+.rect-line {
+    width : 400px;
+    height : 400px;
+    background-color : #fbfbfc;
+/*    background-color: aquamarine;*/
+}
+
+.div-button {
+    margin-top: 0px;
+    flex-direction: column;
+    width: 300px;
+}
+
+.circleall {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 4%;
+}
+
+.circlealls {
+    flex-direction: row;
+}
+
+.buttons {
+    margin-top: 15px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #2a2a2b;
+}
+
+.div-display {
+    width: 400px;
+    height: 400px;
+    border: 2px solid rebeccapurple;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.cell{
+    height: 20px;
+}

@@ -28,3 +28,9 @@
     border: 2px solid rebeccapurple;
     border-radius: 20px;
 }
+
+.div-button {
+    margin-top: 0px;
+    flex-direction: column;
+    width: 300px;
+}

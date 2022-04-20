@@ -58,6 +58,11 @@ export default {
             uri:'pages/image_processing/image_processing'
         })
     },
+    launchDocuments(){
+        router.push({
+            uri:'pages/Documents/Documents'
+        })
+    },
     showPanel(){
         this.$element('simplepanel').show();
     },

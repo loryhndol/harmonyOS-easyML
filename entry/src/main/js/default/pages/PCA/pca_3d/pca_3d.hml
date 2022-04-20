@@ -9,4 +9,11 @@
     <slider min="-360" max="360" value="{{theta}}" onchange="set_theta" ></slider>
     <slider min="-180" max="180" value="{{phi}}" onchange="set_phi" ></slider>
     <button class="button" onclick="test" value="点击绘制特征向量"></button>
+    <div class="div-button">
+        <button onclick="onTextClick">菜单</button>
+    </div>
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="Item 1">返回主页</option>
+        <option value="Item 2">原理介绍</option>
+    </menu>
 </div>

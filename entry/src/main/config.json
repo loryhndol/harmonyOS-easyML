@@ -30,6 +30,7 @@
                 "name": "ohos.permission.WRITE_USER_STORAGE"
             }
         ],
+<<<<<<< Updated upstream
         "abilities": [
             {
                 "skills": [
@@ -59,6 +60,45 @@
                 "type": "data",
                 "uri": "dataability://com.harmonyos.easyml.ImageDataAbility"
             }
+=======
+        "visible": true,
+        "name": "com.harmonyos.easyml.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:EasyML",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "name": "com.harmonyos.easyml.ComputeServiceAbility",
+        "icon": "$media:icon",
+        "description": "$string:computeserviceability_description",
+        "type": "service"
+      },
+      {
+        "name": "com.harmonyos.easyml.ImageDataAbility",
+        "icon": "$media:icon",
+        "description": "$string:imagedataability_description",
+        "type": "data",
+        "uri": "dataability://com.harmonyos.easyml.ImageDataAbility"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/PCA/input_pca/input_pca",
+          "pages/PCA/pca_random/pca_random",
+          "pages/PCA/pca_out_rand/pca_out_rand",
+          "pages/PCA/pca_3d/pca_3d",
+          "pages/PCA/pca_2d/pca_2d",
+          "pages/MLP/MLP",
+          "pages/image_processing/image_processing",
+          "pages/LR/index/index",
+          "pages/LR/introduce/introduce",
+          "pages/LR/linear_regression/linear_regression",
+          "pages/Documents/Documents"
+>>>>>>> Stashed changes
         ],
         "js": [
             {
