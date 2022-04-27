@@ -1,3 +1,4 @@
+import prompt from '@system.prompt';
 //导入router模块，页面路由router根据页面的uri来找到目标页面，从而实现跳转
 import router from '@system.router';
 
@@ -12,5 +13,6 @@ export default {
         router.push ({
             uri:'pages/LR/introduce/introduce', // 指定要跳转的页面
         })
-    }
+    },
+
 }

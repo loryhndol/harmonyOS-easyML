@@ -2,6 +2,17 @@ apply plugin: 'com.huawei.ohos.hap'
 apply plugin: 'com.huawei.ohos.decctest'
 //For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
 ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\探索者\\.ohos\\config\\auto_debug_easyml_80086000028363425.p12')
+            storePassword '00000018CB9BCB60B39F23D8B89302ACBE7409F6053105F1BDF5EFF2152EB100ECAB5B3964FCA1B5'
+            keyAlias = 'debugKey'
+            keyPassword '0000001881932EE7645E95B726633A5937CA0741ED5176EF0009132A834B15F7A89B4617D6C011DE'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\探索者\\.ohos\\config\\auto_debug_easyml_80086000028363425.p7b')
+            certpath file('C:\\Users\\探索者\\.ohos\\config\\auto_debug_easyml_80086000028363425.cer')
+        }
+    }
     compileSdkVersion 7
     defaultConfig {
         compatibleSdkVersion 4
@@ -22,5 +33,5 @@ dependencies {
     ohosTestImplementation 'com.huawei.ohos.testkit:runner:2.0.0.200'
 }
 decc {
-    supportType = ['html','xml']
+    supportType = ['html', 'xml']
 }

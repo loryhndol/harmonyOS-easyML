@@ -58,6 +58,16 @@ export default {
             uri:'pages/image_processing/image_processing'
         })
     },
+    launchKNN(){
+      router.push({
+          uri:'pages/KNN/KNN'
+      })
+    },
+    launchDocuments(){
+        router.push({
+            uri:'pages/Documents/Documents'
+        })
+    },
     showPanel(){
         this.$element('simplepanel').show();
     },

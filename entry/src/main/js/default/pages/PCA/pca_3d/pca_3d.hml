@@ -3,10 +3,28 @@
         主成分分析-3d
     </text>
     <div class="div-display">
-<!--        <canvas ref="canvas" style="width: 400px; height: 400px" @touchstart="initMove" @touchmove="move" @touchend="stopMove"></canvas>-->
-        <canvas ref="canvas" style="width: 400px; height: 400px"></canvas>
+
+    <!--        <canvas ref="canvas" style="width: 400px; height: 400px" @touchstart="initMove" @touchmove="move" @touchend="stopMove"></canvas>-->
+        <canvas ref="canvas" style="width : 400px; height : 400px"></canvas>
     </div>
-    <slider min="-360" max="360" value="{{theta}}" onchange="set_theta" ></slider>
-    <slider min="-180" max="180" value="{{phi}}" onchange="set_phi" ></slider>
-    <button class="button" onclick="test" value="点击绘制特征向量"></button>
+    <div class="div-text">
+        <text>theta: {{ theta }}</text>
+    </div>
+
+    <slider min="-360" max="360" value="{{ theta }}" onchange="set_theta"></slider>
+    <div class="div-text">
+        <text>phi: {{ phi }}</text>
+    </div>
+
+    <slider min="-180" max="180" value="{{ phi }}" onchange="set_phi"></slider>
+    <div class="div-button">
+        <button class="button" onclick="test" value="PCA投影"></button>
+    </div>
+    <div class="div-button">
+        <button class="button" onclick="onTextClick">菜单</button>
+    </div>
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="Item 1">返回主页</option>
+        <option value="Item 2">原理介绍</option>
+    </menu>
 </div>

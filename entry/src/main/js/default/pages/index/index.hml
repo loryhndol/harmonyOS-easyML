@@ -13,7 +13,13 @@
             <button class="buttons" onclick="launchMLP">{{ $t('strings.MLP') }}</button>
         </div>
         <div class="circle_all">
+            <button class="buttons" onclick="launchKNN">KNN</button>
+        </div>
+        <div class="circle_all">
             <button class="buttons" onclick="launchImageProcessing">图像处理</button>
+        </div>
+        <div class="circle_all">
+            <button class="buttons" onclick="launchDocuments">资料汇总</button>
         </div>
     </div>
 
@@ -25,11 +31,28 @@
             <div class="panel-div">
                 <div class="inner-txt">
                     <text class="txt">我们来自山东大学计算机学院。本应用使用鸿蒙 ArkUI + mljs + colormapjs 开发。</text>
-                    <text class="txt">Github：</text>
-                    <text class="txt">UI & UX:@loryhndol</text>
-                    <text class="txt">LR&MLP: @NuanBaobao, @qiaojing09</text>
-                    <text class="txt"> PCA& data I/O: @sduzzx857, @zwh-sdu</text>
                 </div>
+                <div class="inner-txt">
+                    <text class="txt">Github：</text>
+                </div>
+                <div class="inner-txt">
+                    <text class="txt">UI/UX, PCA_3d：@loryhndol</text>
+                </div>
+                <div class="inner-txt">
+                    <text class="txt">LR: @NuanBaobao</text>
+                </div>
+                <div class="inner-txt">
+                    <text class="txt">KNN: @qiaojing09</text>
+                </div>
+                <div class="inner-txt">
+                    <text class="txt">PCA & PCA_2d: @sduzzx857, @zwh-sdu</text>
+                </div>
+                <div class="inner-txt">
+                    <text class="txt">
+                        本项目地址：https://github.com/loryhndol/harmonyOS-easyML
+                    </text>
+                </div>
+
                 <div class="inner-btn">
                     <button type="capsule" onclick="closePanel">{{ $t('strings.close') }}</button>
                 </div>

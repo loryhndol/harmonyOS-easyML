@@ -6,7 +6,6 @@
     left: 0px;
     top: 0px;
     width: 454px;
-    height: 600px;
 }
 
 .title {
@@ -18,12 +17,17 @@
 
 .button{
 /*    margin-top: 10px;*/
-    border-top: 30px;
-    border-top-color: white;
     text-color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     background-color: blue;
-    width: 50%;
-    height: 100px;
+    height: 40px;
+    width:454px;
+}
+
+.div-button {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
 }

@@ -22,3 +22,49 @@
     width: 454px;
     text-align: left;
 }
+
+.div-button {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.div-title {
+/*    background-color: aquamarine;*/
+    flex-direction: column;/* 设置容器内的项目纵向排列 */
+    justify-content: center;/* 设置项目位于容器主轴的中心 */
+    align-items: center;/* 项目在交叉轴居中 */
+}
+.text-title {
+    font-size: 26px;
+    width: 90%;
+    height: 100px;
+    background-color: #e4e4e5;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px 1px rgba(192,192,192,0.9);
+}
+
+.div-introduce {
+/*    background-color: #0f446d;*/
+    flex-direction: column;/* 设置容器内的项目纵向排列 */
+    justify-content: center;/* 设置项目位于容器主轴的中心 */
+    align-items: center;/* 项目在交叉轴居中 */
+}
+
+.text-introduce {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    width: 90%;
+    height: 400px;
+    background-color: #f9f9fc;
+    border-radius: 12px;
+/*    text-color: #082ad6;*/
+    border:1px solid rgba(192,192,192,0.3);
+    transition: all 0.5s;
+/*    font-weight: 500;*/
+    padding: 5px;
+}

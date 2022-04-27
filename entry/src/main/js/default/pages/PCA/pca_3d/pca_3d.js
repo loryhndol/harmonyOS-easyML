@@ -1,3 +1,5 @@
+import prompt from '@system.prompt';
+import router from '@system.router';
 const { Matrix } = require('ml-matrix');
 
 export default {
@@ -7,7 +9,6 @@ export default {
         canvas_height: 400,
         axisColor: ["red", "red", "yellow", "yellow", "green", "green"],
         axis: [[-100, 0, 0], [100, 0, 0], [0, -100, 0], [0, 100, 0], [0, 0, -100], [0, 0, 100]], // 左手坐标系
-        three_dimensional: [[40, 40, 40], [10, -30, 60], [-40, -10, 30], [70, 10, -50], [40, 60, 10], [-30, 90, 10]],
 
         visual: {
             x: 0,
@@ -23,6 +24,11 @@ export default {
             x: (x - this.visual.x) * this.visual.z / (this.visual.z - z) + 300 / 2,
             y: (y - this.visual.y) * this.visual.z / (-this.visual.z + z) + 400 / 2
         }
+    },
+    onInit(){
+        this.three_dimensional = this.before_pca;
+        console.info(JSON.stringify(this.three_dimensional));
+//        this.after_pca = this.after_pca;
     },
     onShow() {
         let point;
@@ -273,24 +279,24 @@ export default {
     },
     set_theta(e) {
         if (e.mode == "start") {
-            this.theta = e.value;
+            this.theta = e.value/10;
         } else if (e.mode == "move") {
-            this.theta = e.value;
+            this.theta = e.value/10;
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.theta -= e.value; //撤销操作
+            this.theta -= e.value/10; //撤销操作
         }
         this.rotate();
         this.onShow();
     },
     set_phi(e) {
         if (e.mode == "start") {
-            this.phi = e.value;
+            this.phi = e.value/10;
         } else if (e.mode == "move") {
-            this.phi = e.value;
+            this.phi = e.value/10;
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.phi -= e.value; // 撤销操作
+            this.phi -= e.value/10; // 撤销操作
         }
         this.rotate();
         this.onShow();
@@ -303,5 +309,17 @@ export default {
     },
     ascend_z(x,y){
         return x[2]-y[2];
-    }
+    },
+    onMenuSelected(e) {
+        if (e.value == "Item 1") {
+            router.push ({
+                uri:'pages/index/index', // 指定要跳转的页面
+            })
+        }
+    },
+    onTextClick() {
+        this.$element("apiMenu").show({
+            x: 270, y: 520
+        });
+    },
 }

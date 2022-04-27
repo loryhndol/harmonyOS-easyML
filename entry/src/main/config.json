@@ -53,7 +53,16 @@
         "description": "$string:mainability_description",
         "label": "$string:EasyML",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "standard",
+        "metaData":{
+          "customizeData":[
+            {
+              "name": "hwc-theme",
+              "extra": "",
+              "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar"
+            }
+          ]
+        }
       },
       {
         "name": "com.harmonyos.easyml.ComputeServiceAbility",
@@ -82,7 +91,9 @@
           "pages/image_processing/image_processing",
           "pages/LR/index/index",
           "pages/LR/introduce/introduce",
-          "pages/LR/linear_regression/linear_regression"
+          "pages/LR/linear_regression/linear_regression",
+          "pages/Documents/Documents",
+          "pages/KNN/KNN"
         ],
         "name": "default",
         "window": {

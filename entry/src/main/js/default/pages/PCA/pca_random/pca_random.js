@@ -2,9 +2,10 @@ import router from '@system.router';
 export default {
     data: {
         paragraphFirst: '  我们随机生成m*n维数据，第一维代表样本的个数，第二维代表每个样本的维数。',
-        m: 7,
-        n: 5,
-        after: 3,
+        m: '7',
+        n: '5',
+        after: '3',
+        jumpSign: true,
     },
     change_x(e) {
         this.m = e.value;  //e.value
@@ -16,12 +17,15 @@ export default {
         this.after = e.value;
     },
     launch() {
+        if (this.after === '1' && this.n !== '2') this.jumpSign = false;
+        console.info('sign: ' + this.jumpSign);
 
         router.push ({
             uri: 'pages/PCA/pca_out_rand/pca_out_rand',
             params: {
                 data1: rnd(this.m, this.n),
                 after: this.after,
+                jumpSign:this.jumpSign,
             },
         });
     }
