@@ -40,7 +40,7 @@ export default {
     },
     launchLR(){
         router.push({
-            uri:'pages/LR/LR'
+            uri:'pages/LR/index/index'
         })
     },
     launchPCA(){
@@ -57,6 +57,11 @@ export default {
         router.push({
             uri:'pages/image_processing/image_processing'
         })
+    },
+    launchKNN(){
+      router.push({
+          uri:'pages/KNN/KNN'
+      })
     },
     launchDocuments(){
         router.push({

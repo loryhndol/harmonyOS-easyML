@@ -5,7 +5,7 @@
     <input type="number" class="dim_x" onchange="change_x">{{ m }}</input>
     <text class="paragraph-text">请输入第二维维数，即每个样本的维数</text>
     <input type="number" class="dim_y" onchange="change_y">{{ n }}</input>
-    <text class="paragraph-text">请输入要降维到的维数，需要小于上面的第二维维数</text>
+    <text class="paragraph-text">请输入要降维到的维数</text>
     <input type="number" class="dim_after" onchange="change_after"></input>
     <button type="capsule" value="点击生成" class="button" onclick="launch"></button>
 </div>

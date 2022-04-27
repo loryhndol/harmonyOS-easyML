@@ -19,6 +19,7 @@ export default {
 
         const m = this.data1.length;
         const n = this.data1[0].length;
+        console.info(this.jumpSign === false);
         const d_after = this.after;
         this.after_height = d_after.length;
         this.after_width = d_after[0].length;
@@ -70,14 +71,7 @@ export default {
 
 
     },
-<<<<<<< Updated upstream
-    handleClick(){
-        router.push ({
-            uri: 'pages/PCA/pca_3d/pca_3d',
-        });
-=======
     handleClick() {
-        console.info(this.after);
         if (this.after === '2') {
             router.push({
                 uri: 'pages/PCA/pca_3d/pca_3d',
@@ -86,7 +80,7 @@ export default {
                     after_pca: this.after_pca.to2DArray()
                 }
             });
-        } else if (this.after === '1') {
+        } else if (this.n === '2' && this.after === '1') {
             router.push({
                 uri: 'pages/PCA/pca_2d/pca_2d',
                 params:{
@@ -97,6 +91,5 @@ export default {
         }
 
 
->>>>>>> Stashed changes
     }
 }

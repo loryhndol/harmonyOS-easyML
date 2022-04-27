@@ -279,24 +279,24 @@ export default {
     },
     set_theta(e) {
         if (e.mode == "start") {
-            this.theta = e.value;
+            this.theta = e.value/10;
         } else if (e.mode == "move") {
-            this.theta = e.value;
+            this.theta = e.value/10;
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.theta -= e.value; //撤销操作
+            this.theta -= e.value/10; //撤销操作
         }
         this.rotate();
         this.onShow();
     },
     set_phi(e) {
         if (e.mode == "start") {
-            this.phi = e.value;
+            this.phi = e.value/10;
         } else if (e.mode == "move") {
-            this.phi = e.value;
+            this.phi = e.value/10;
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.phi -= e.value; // 撤销操作
+            this.phi -= e.value/10; // 撤销操作
         }
         this.rotate();
         this.onShow();
@@ -319,7 +319,7 @@ export default {
     },
     onTextClick() {
         this.$element("apiMenu").show({
-            x: 270, y: 320
+            x: 270, y: 520
         });
     },
 }

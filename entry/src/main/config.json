@@ -1,73 +1,68 @@
 {
-    "app": {
-        "bundleName": "com.harmonyos.easyml",
-        "vendor": "harmonyos",
-        "version": {
-            "code": 1000000,
-            "name": "1.0.0"
-        }
+  "app": {
+    "bundleName": "com.harmonyos.easyml",
+    "vendor": "harmonyos",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.harmonyos.easyml",
+    "name": ".EasyML",
+    "mainAbility": "com.harmonyos.easyml.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
     },
-    "deviceConfig": {},
-    "module": {
-        "package": "com.harmonyos.easyml",
-        "name": ".EasyML",
-        "mainAbility": "com.harmonyos.easyml.MainAbility",
-        "deviceType": ["phone", "tablet", "tv", "wearable"],
-        "distro": {
-            "deliveryWithInstall": true,
-            "moduleName": "entry",
-            "moduleType": "entry",
-            "installationFree": false
-        },
-        "reqPermissions": [
-            {
-                "name": "com.harmonyos.easyml.ImageDataAbility.DATA"
-            },
-            {
-                "name": "ohos.permission.READ_USER_STORAGE"
-            },
-            {
-                "name": "ohos.permission.WRITE_USER_STORAGE"
-            }
+    "reqPermissions": [
+      {
+        "name": "com.harmonyos.easyml.ImageDataAbility.DATA"
+      },
+      {
+        "name": "ohos.permission.READ_USER_STORAGE"
+      },
+      {
+        "name": "ohos.permission.WRITE_USER_STORAGE"
+      }
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
         ],
-<<<<<<< Updated upstream
-        "abilities": [
-            {
-                "skills": [
-                    {
-                        "entities": ["entity.system.home"],
-                        "actions": ["action.system.home"]
-                    }
-                ],
-                "visible": true,
-                "name": "com.harmonyos.easyml.MainAbility",
-                "icon": "$media:icon",
-                "description": "$string:mainability_description",
-                "label": "$string:EasyML",
-                "type": "page",
-                "launchType": "standard"
-            },
-            {
-                "name": "com.harmonyos.easyml.ComputeServiceAbility",
-                "icon": "$media:icon",
-                "description": "$string:computeserviceability_description",
-                "type": "service"
-            },
-            {
-                "name": "com.harmonyos.easyml.ImageDataAbility",
-                "icon": "$media:icon",
-                "description": "$string:imagedataability_description",
-                "type": "data",
-                "uri": "dataability://com.harmonyos.easyml.ImageDataAbility"
-            }
-=======
         "visible": true,
         "name": "com.harmonyos.easyml.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:EasyML",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "standard",
+        "metaData":{
+          "customizeData":[
+            {
+              "name": "hwc-theme",
+              "extra": "",
+              "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar"
+            }
+          ]
+        }
       },
       {
         "name": "com.harmonyos.easyml.ComputeServiceAbility",
@@ -97,32 +92,20 @@
           "pages/LR/index/index",
           "pages/LR/introduce/introduce",
           "pages/LR/linear_regression/linear_regression",
-          "pages/Documents/Documents"
->>>>>>> Stashed changes
+          "pages/Documents/Documents",
+          "pages/KNN/KNN"
         ],
-        "js": [
-            {
-                "pages": [
-                    "pages/index/index",
-                    "pages/LR/LR",
-                    "pages/PCA/input_pca/input_pca",
-                    "pages/PCA/pca_random/pca_random",
-                    "pages/PCA/pca_out_rand/pca_out_rand",
-                    "pages/PCA/pca_3d/pca_3d",
-                    "pages/MLP/MLP",
-                    "pages/image_processing/image_processing"
-                ],
-                "name": "default",
-                "window": {
-                    "designWidth": 720,
-                    "autoDesignWidth": true
-                }
-            }
-        ],
-        "defPermissions": [
-            {
-                "name": "com.harmonyos.easyml.DataAbilityShellProvider.PROVIDER"
-            }
-        ]
-    }
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ],
+    "defPermissions": [
+      {
+        "name": "com.harmonyos.easyml.DataAbilityShellProvider.PROVIDER"
+      }
+    ]
+  }
 }

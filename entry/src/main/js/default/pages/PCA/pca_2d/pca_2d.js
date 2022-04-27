@@ -151,7 +151,7 @@ export default {
     },
     onTextClick() {
         this.$element("apiMenu").show({
-            x: 270, y: 320
+            x: 270, y: 500
         });
     },
 }

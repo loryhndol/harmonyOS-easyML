@@ -3,7 +3,7 @@
     <div class="div-display">
         <canvas ref="canvas" style="width : 400px; height : 400px"></canvas>
     </div>
-    <div class="div-button">
-        <button value="jump" onclick="handleClick"></button>
+    <div class="div-button" if="{{jumpSign}}">
+        <button value="绘制散点图" onclick="handleClick"></button>
     </div>
 </div>

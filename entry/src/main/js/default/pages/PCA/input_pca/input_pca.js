@@ -9,4 +9,9 @@ export default {
             uri: 'pages/PCA/pca_random/pca_random',
         });
     },
+    launch_2d() {
+        router.push ({
+            uri: 'pages/PCA/pca_2d/pca_2d',
+        });
+    },
 }

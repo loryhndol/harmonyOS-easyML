@@ -4,10 +4,10 @@
     align-items: flex-start;
     justify-content: center;
     width: 454px;
-    height: 600px;
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .title {
@@ -29,8 +29,18 @@
     border-radius: 20px;
 }
 
+.button{
+/*    margin-top: 10px;*/
+    text-color: white;
+    font-size: 20px;
+    font-style: normal;
+    background-color: blue;
+    height: 40px;
+    width:454px;
+}
 .div-button {
-    margin-top: 0px;
-    flex-direction: column;
-    width: 300px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
