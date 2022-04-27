@@ -31,6 +31,11 @@
             <div class="panel-div">
                 <div class="inner-txt">
                     <text class="txt">我们来自山东大学计算机学院。本应用使用鸿蒙 ArkUI + mljs + colormapjs 开发。</text>
+                    <text class="txt">Github：</text>
+                    <text class="txt">UI/UX, PCA_3d:@loryhndol</text>
+                    <text class="txt">LR: @NuanBaobao</text>
+                    <text class="txt">KNN: @qiaojing09</text>
+                    <text class="txt">PCA & PCA_2d: @sduzzx857, @zwh-sdu</text>
                 </div>
                 <div class="inner-txt">
                     <text class="txt">Github：</text>
