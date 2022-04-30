@@ -95,22 +95,18 @@
 }
 .txt {
     color: #000000;
-    font-size: 20px;
-    text-align: left;
-    width: 400px;
-    word-break: break-word;
+    font-size: 16px;
+    line-height: 20px;
 }
 .panel-div {
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .inner-txt {
     width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 10px;
-    justify-content: center;
-    align-items: center;
 }
 .inner-btn {
     width: 100%;

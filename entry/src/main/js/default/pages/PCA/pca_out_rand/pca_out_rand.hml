@@ -1,9 +1,10 @@
 <div class="container">
-    <text class="title">降维结果</text>
+    <text class="title">上图：原始数据</text>
+    <text class="title">下图：降维结果</text>
     <div class="div-display">
         <canvas ref="canvas" style="width : 400px; height : 400px"></canvas>
     </div>
     <div class="div-button" if="{{jumpSign}}">
-        <button value="绘制散点图" onclick="handleClick"></button>
+        <button class="button" value="绘制散点图" onclick="handleClick"></button>
     </div>
 </div>

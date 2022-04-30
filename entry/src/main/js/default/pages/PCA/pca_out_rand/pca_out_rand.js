@@ -30,7 +30,7 @@ export default {
         let cell_size = (Math.min(width, height) - 5 * 2) / (this.table_height * 2) + 1;
         console.info('width:' + this.table_width);
         console.info('height:' + this.table_height);
-        let table_padding_x = (width - 50 * 2 - (cell_size + 2) * this.table_width) / 2; // container的padding考虑在内
+        let table_padding_x = (width - (cell_size + 2) * this.table_width) / 2;
         let table_padding_y_upper = 20
         let table_padding_y_lower = 200;
 
@@ -57,11 +57,15 @@ export default {
         }
         var eigenvec = new Matrix(newPoints);
         this.after_pca = this.before_pca.mmul(eigenvec.transpose())
+
         max_val = this.after_pca.max();
         min_val = this.after_pca.min();
 
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
+        const m_after = this.after_pca.data.length;
+        const n_after = this.after_pca.data[0].length;
+        console.info("after_pca: "+JSON.stringify(this.after_pca));
+        for (let i = 0; i < m_after; i++) {
+            for (let j = 0; j < n_after; j++) {
                 let normalized_data = (this.after_pca.data[i][j] - min_val) / (max_val - min_val);
                 let rgb_array = evaluate_cmap(normalized_data, 'viridis', false);
                 let fillColor = 'rgb(' + rgb_array[0] + ',' + rgb_array[1] + ',' + rgb_array[2] + ')';

@@ -27,7 +27,7 @@ export default {
         ctx.strokeStyle = '#100f0f';
 
         //        strokeRect(x: number, y: number, width:number, height: number): void 绘制具有边框的矩形，矩形内部不填充
-        ctx.strokeRect(30, 20, this.canvas_width, this.canvas_height);
+//        ctx.strokeRect(30, 20, this.canvas_width, this.canvas_height);
 
         //绘制x轴数字
         while (dx < this.canvas_width) {

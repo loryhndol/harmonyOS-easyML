@@ -2,11 +2,12 @@
     <text class="title">
         {{ title }}
     </text>
-    <canvas class="rect-line" ref="canvas" @touchstart="add_point">
-    </canvas>
+    <div class="div-display">
+        <canvas class="rect-line" ref="canvas" @touchstart="add_point"></canvas>
+    </div>
     <div class="div-button">
         <div class="circleall">
-            <button class="buttons" waiting="true" onclick="knn">进行knn分类</button>
+            <button class="buttons" onclick="knn">进行knn分类</button>
         </div>
     </div>
 </div>
