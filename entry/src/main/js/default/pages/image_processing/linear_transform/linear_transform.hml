@@ -6,6 +6,17 @@
         <canvas ref="canvas" style="width: 400px; height: 400px"></canvas>
     </div>
 
+    <div class="div-text">
+        <text>bias: {{ bias }}</text>
+    </div>
+
+    <slider min="-100" max="100" value="{{ bias }}" onchange="set_bias"></slider>
+    <div class="div-text">
+        <text>weight: {{ weight }}</text>
+    </div>
+
+    <slider min="-100" max="100" value="{{ weight }}" onchange="set_weight"></slider>
+
     <div class="div-button">
         <button class="button" onclick="onTextClick">菜单</button>
     </div>
