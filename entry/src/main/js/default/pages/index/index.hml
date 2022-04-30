@@ -15,12 +15,12 @@
         <div class="circle_all">
             <button class="buttons" onclick="launchKNN">KNN</button>
         </div>
-        <div class="circle_all">
-            <button class="buttons" onclick="launchImageProcessing">图像处理</button>
-        </div>
-        <div class="circle_all">
-            <button class="buttons" onclick="launchDocuments">资料汇总</button>
-        </div>
+<!--        <div class="circle_all">-->
+<!--            <button class="buttons" onclick="launchImageProcessing">图像处理</button>-->
+<!--        </div>-->
+<!--        <div class="circle_all">-->
+<!--            <button class="buttons" onclick="launchDocuments">资料汇总</button>-->
+<!--        </div>-->
     </div>
 
     <div class="doc-page">

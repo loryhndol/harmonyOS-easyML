@@ -19,3 +19,20 @@ npm install --save ml-regression-simple-linear
 <!--  -->
 
 We have tested the application on`P40 pro`remote emulator and `p30 pro` in reality.
+
+## Pages Structure
+```text
+├─index
+├─KNN: the page about KNN algorithm
+├─LR
+│  ├─index
+│  ├─introduce
+│  └─linear_regression
+├─MLP: multi-layer perceptron
+└─PCA
+    ├─input_pca: input data
+    ├─pca_2d: the 2d page
+    ├─pca_3d: the 3d page
+    ├─pca_out_rand: heatmap output
+    └─pca_random: generate random numbers as input
+```
