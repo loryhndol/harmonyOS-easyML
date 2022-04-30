@@ -19,6 +19,7 @@ export default {
 
         const m = this.data1.length;
         const n = this.data1[0].length;
+        this.n = n;
         console.info(this.jumpSign === false);
         const d_after = this.after;
         this.after_height = d_after.length;
@@ -72,11 +73,9 @@ export default {
                 fillRoundRect(ctx, table_padding_x + j * (cell_size + 2), table_padding_y_lower + i * (cell_size + 2), cell_size, cell_size, 4, fillColor);
             }
         }
-
-
     },
     handleClick() {
-        if (this.after === '2') {
+        if (this.after == 2) {
             router.push({
                 uri: 'pages/PCA/pca_3d/pca_3d',
                 params: {
@@ -84,7 +83,7 @@ export default {
                     after_pca: this.after_pca.to2DArray()
                 }
             });
-        } else if (this.n === '2' && this.after === '1') {
+        } else if (this.n == 2 && this.after == 1) {
             router.push({
                 uri: 'pages/PCA/pca_2d/pca_2d',
                 params:{

@@ -1,7 +1,7 @@
 import router from '@system.router';
 export default {
     data: {
-        paragraphFirst: '  我们随机生成m*n维数据，第一维代表样本的个数，第二维代表每个样本的维数。',
+        paragraphFirst: '随机生成m*n维数据，第一维代表样本的个数，第二维代表每个样本的维数。',
         m: '7',
         n: '5',
         after: '3',
@@ -32,13 +32,15 @@ export default {
 }
 
 function rnd(m,n){
+    const max_num = 100;
+    const min_num = -100;
     const data = new Array(m);
     for (var index = 0; index < m; index++) {
         data[index] = new Array(n);
     }
     for (var i = 0;i < m;i++){
         for (var j=0;j < n;j++){
-            data[i][j] = Math.round(Math.random()*100);
+            data[i][j] = Math.round(Math.random()*(max_num-min_num+1)+min_num);
         }
     }
     return data;
