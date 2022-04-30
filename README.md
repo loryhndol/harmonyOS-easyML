@@ -22,6 +22,11 @@ We have tested the application on`P40 pro`remote emulator and `p30 pro` in reali
 
 ## Pages Structure
 ```text
+├─image_processing
+│  ├─convolution
+│  ├─display
+│  ├─histogram
+│  └─linear_transform
 ├─index
 ├─KNN: the page about KNN algorithm
 ├─LR
