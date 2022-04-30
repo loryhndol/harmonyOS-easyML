@@ -55,7 +55,7 @@ export default {
     },
     launchImageProcessing(){
         router.push({
-            uri:'pages/image_processing/image_processing'
+            uri:'pages/image_processing/display/display'
         })
     },
     launchKNN(){

@@ -1,5 +1,6 @@
 import prompt from '@system.prompt';
 import router from '@system.router';
+
 const { Matrix } = require('ml-matrix');
 
 export default {
@@ -25,10 +26,10 @@ export default {
             y: (y - this.visual.y) * this.visual.z / (-this.visual.z + z) + 400 / 2
         }
     },
-    onInit(){
+    onInit() {
         this.three_dimensional = this.before_pca;
         console.info(JSON.stringify(this.three_dimensional));
-//        this.after_pca = this.after_pca;
+        //        this.after_pca = this.after_pca;
     },
     onShow() {
         let point;
@@ -54,12 +55,11 @@ export default {
         }
 
 
-
         if (this.intersection_points !== undefined) {
             // 绘制交点
             ctx.beginPath();
             ctx.fillStyle = "#80d4d4d4";
-            ctx.strokeStyle = "#b8b8b8"
+            ctx.strokeStyle = "#00ffffff"
             ctx.lineWidth = 1
             for (let i = 0;i < this.intersection_points.length; i++) {
                 point = this.transformCoordinatePoint(...this.intersection_points[i]);
@@ -237,9 +237,9 @@ export default {
             for (let j = 0; j < 2; j++) {
                 let x_tmp = x_dir[i];
                 let z_tmp = z_dir[j];
-                let y_tmp = -(panel.a*x_tmp+panel.c*z_tmp+d) / panel.b;
-                if (-100 <= y_tmp && y_tmp <= 100){
-                    intersection.push([x_tmp,y_tmp,z_tmp]);
+                let y_tmp = -(panel.a * x_tmp + panel.c * z_tmp + d) / panel.b;
+                if (-100 <= y_tmp && y_tmp <= 100) {
+                    intersection.push([x_tmp, y_tmp, z_tmp]);
                 }
 
             }
@@ -251,9 +251,9 @@ export default {
             for (let j = 0; j < 2; j++) {
                 let z_tmp = z_dir[i];
                 let y_tmp = y_dir[j];
-                let x_tmp = -(panel.b*y_tmp+panel.c*z_tmp+d) / panel.a;
-                if(-100 <= x_tmp && x_tmp <= 100){
-                    intersection.push([x_tmp, y_tmp,z_tmp]);
+                let x_tmp = -(panel.b * y_tmp + panel.c * z_tmp + d) / panel.a;
+                if (-100 <= x_tmp && x_tmp <= 100) {
+                    intersection.push([x_tmp, y_tmp, z_tmp]);
                 }
 
 
@@ -267,9 +267,9 @@ export default {
             for (let j = 0; j < 2; j++) {
                 let x_tmp = x_dir[i];
                 let y_tmp = y_dir[j];
-                let z_tmp = -(panel.a*x_tmp+panel.b*y_tmp+d) / panel.c;
-                if(-100 <= z_tmp && z_tmp <= 100){
-                    intersection.push([x_tmp,y_tmp,z_tmp]);
+                let z_tmp = -(panel.a * x_tmp + panel.b * y_tmp + d) / panel.c;
+                if (-100 <= z_tmp && z_tmp <= 100) {
+                    intersection.push([x_tmp, y_tmp, z_tmp]);
                 }
 
             }
@@ -279,41 +279,49 @@ export default {
     },
     set_theta(e) {
         if (e.mode == "start") {
-            this.theta = e.value/10;
+            this.theta = this.toDecimal(e.value / 10);
         } else if (e.mode == "move") {
-            this.theta = e.value/10;
+            this.theta = this.toDecimal(e.value / 10);
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.theta -= e.value/10; //撤销操作
+            this.theta -= this.toDecimal(e.value / 10); //撤销操作
         }
         this.rotate();
         this.onShow();
     },
     set_phi(e) {
         if (e.mode == "start") {
-            this.phi = e.value/10;
+            this.phi = this.toDecimal(e.value / 10);
         } else if (e.mode == "move") {
-            this.phi = e.value/10;
+            this.phi = this.toDecimal(e.value / 10);
             console.info(this.phi);
         } else if (e.mode == "end") {
-            this.phi -= e.value/10; // 撤销操作
+            this.phi -= this.toDecimal(e.value / 10); // 撤销操作
         }
         this.rotate();
         this.onShow();
     },
-    ascend_x(x,y){
-        return x[0] - y[0];  //按照数组的第1个值升序排列
+    toDecimal(x) {
+        var f = parseFloat(x);
+        if (isNaN(f)) {
+            return;
+        }
+        f = Math.round(x * 100) / 100;
+        return f;
     },
-    ascend_y(x,y){
-        return x[1]-y[1];
+    ascend_x(x, y) {
+        return x[0] - y[0]; //按照数组的第1个值升序排列
     },
-    ascend_z(x,y){
-        return x[2]-y[2];
+    ascend_y(x, y) {
+        return x[1] - y[1];
+    },
+    ascend_z(x, y) {
+        return x[2] - y[2];
     },
     onMenuSelected(e) {
         if (e.value == "Item 1") {
-            router.push ({
-                uri:'pages/index/index', // 指定要跳转的页面
+            router.push({
+                uri: 'pages/index/index', // 指定要跳转的页面
             })
         }
     },

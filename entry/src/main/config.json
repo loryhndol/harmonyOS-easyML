@@ -54,8 +54,8 @@
         "label": "$string:EasyML",
         "type": "page",
         "launchType": "standard",
-        "metaData":{
-          "customizeData":[
+        "metaData": {
+          "customizeData": [
             {
               "name": "hwc-theme",
               "extra": "",
@@ -88,12 +88,15 @@
           "pages/PCA/pca_3d/pca_3d",
           "pages/PCA/pca_2d/pca_2d",
           "pages/MLP/MLP",
-          "pages/image_processing/image_processing",
           "pages/LR/index/index",
           "pages/LR/introduce/introduce",
           "pages/LR/linear_regression/linear_regression",
           "pages/Documents/Documents",
-          "pages/KNN/KNN"
+          "pages/KNN/KNN",
+          "pages/image_processing/display/display",
+          "pages/image_processing/histogram/histogram",
+          "pages/image_processing/convolution/convolution",
+          "pages/image_processing/linear_transform/linear_transform"
         ],
         "name": "default",
         "window": {
