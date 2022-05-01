@@ -18,7 +18,7 @@ npm install --save ml-regression-simple-linear
 ![image](https://user-images.githubusercontent.com/85046312/163530595-ae99aa35-f61b-4865-998e-29e63f0da839.png)
 <!--  -->
 
-We have tested the application on`P40 pro`remote emulator and `p30 pro` in reality.
+We have tested the application on`Huawei P40 pro`remote emulator and `Huawei P30 pro` in reality.
 
 ## Pages Structure
 ```text
