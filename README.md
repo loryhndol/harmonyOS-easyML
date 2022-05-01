@@ -33,7 +33,7 @@ We have tested the application on`Huawei P40 pro`remote emulator and `Huawei P30
 │  ├─index
 │  ├─introduce
 │  └─linear_regression
-├─MLP: multi-layer perceptron
+├─MLP: multi-layer perceptron (under construction)
 └─PCA
     ├─input_pca: input data
     ├─pca_2d: the 2d page
