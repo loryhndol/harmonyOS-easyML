@@ -46,7 +46,10 @@ button {
     border-radius: 20px;
 }
 
-
+.chart-data {
+    width: 400px;
+    height: 400px;
+}
 
 
 
