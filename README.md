@@ -1,6 +1,6 @@
 # harmonyOS-easyML
 
-A easy machine learning tutorial app using HarmonyOS.
+An easy machine learning tutorial app using HarmonyOS.
 
 #### API version
 

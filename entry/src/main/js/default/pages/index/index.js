@@ -60,7 +60,7 @@ export default {
     },
     launchKNN(){
       router.push({
-          uri:'pages/KNN/KNN'
+          uri:'pages/KNN/index/index'
       })
     },
     launchDocuments(){
